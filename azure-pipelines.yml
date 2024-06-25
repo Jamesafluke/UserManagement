@@ -13,6 +13,7 @@ variables:
   dockerRegistryServiceConnection: '90ac97fb-4811-45a0-a67e-ed1a607a1728'
   imageRepository: 'jamesaflukeusermanagement'
   containerRegistry: 'usermanagement29387.azurecr.io'
+  buildContext: $(Build.SourcesDirectory)
   dockerfilePath: '$(Build.SourcesDirectory)/UserManagement/Dockerfile'
   tag: '$(Build.BuildId)'
 
