@@ -8,7 +8,7 @@ EXPOSE 8081
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
-WORKDIR /c
+WORKDIR /s
 COPY ["UserManagement/UserManagement.csproj", "UserManagement/"]
 RUN dotnet restore "./UserManagement/UserManagement.csproj"
 COPY . .
