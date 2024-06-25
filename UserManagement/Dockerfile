@@ -8,11 +8,10 @@ EXPOSE 8081
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
-WORKDIR /s
-COPY ["UserManagement/UserManagement.csproj", "UserManagement/"]
-RUN dotnet restore "./UserManagement/UserManagement.csproj"
+WORKDIR /src
+COPY ["UserManagement.csproj", "/"]
+RUN dotnet restore "/UserManagement.csproj"
 COPY . .
-WORKDIR "/src/UserManagement"
 RUN dotnet build "./UserManagement.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
