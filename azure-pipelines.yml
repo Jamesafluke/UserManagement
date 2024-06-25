@@ -28,7 +28,7 @@ stages:
     steps:
     - task: Bash@3
       inputs:
-        script: pwd
+        script: sh test.sh 
 - stage: Build
   displayName: Build and push stage
   jobs:
