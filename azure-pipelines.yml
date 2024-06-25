@@ -23,9 +23,9 @@ stages:
 - stage: HelloWorld
   displayName: Testing hello world
   jobs:
-      - job: test
-        DisplayName: Testing things!
-        script: echo "Testing"
+  - job: test
+    displayName: Testing things!
+    script: echo "Testing"
 - stage: Build
   displayName: Build and push stage
   jobs:
