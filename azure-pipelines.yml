@@ -25,7 +25,10 @@ stages:
   jobs:
   - job: test
     displayName: Testing things!
-    script: echo "Testing"
+    steps:
+    - task: Bash@3
+      inputs:
+      script: "echo hello world"
 - stage: Build
   displayName: Build and push stage
   jobs:
