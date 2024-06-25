@@ -1,4 +1,11 @@
 #!bin/bash
 
+echo Workspace	
 pwd
-echo Hello world
+ls
+
+echo Up a level
+cd ..
+pwd
+ls
+
