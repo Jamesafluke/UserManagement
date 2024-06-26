@@ -21,15 +21,6 @@ variables:
   vmImageName: 'ubuntu-latest'
 
 stages:
-- stage: HelloWorld
-  displayName: Testing hello world
-  jobs:
-  - job: test
-    displayName: Testing things!
-    steps:
-    - task: Bash@3
-      inputs:
-        filePath: ./test.sh
 - stage: Build
   displayName: Build and push stage
   jobs:
