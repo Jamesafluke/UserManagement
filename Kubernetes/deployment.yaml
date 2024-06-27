@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: usermanagementdeployment
-          image: 'usermanagement29387.azurecr.io/jamesaflukeusermanagement:24'
+          image: hello-world
           resources:
             limits:
               cpu: 100m
