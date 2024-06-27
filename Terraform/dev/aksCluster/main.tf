@@ -24,7 +24,7 @@ provider "azurerm" {
 
 locals{
   location = "westus2"
-  resource_group_name = "rg-aks-userManagement"
+  resource_group_name = "rg-userManagement-aks"
   environment = "dev"
 }
 

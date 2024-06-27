@@ -15,7 +15,7 @@ spec:
         app: userManagementapp
     spec:
       containers:
-        - name: usermanagementdeployment
+        - name: 'usermanagement29387.azurecr.io/jamesaflukeusermanagement:33'
           image: hello-world
           resources:
             limits:
