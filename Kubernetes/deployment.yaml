@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: userManagement-deployment
+  name: usermanagement-deployment
   labels:
     app: userManagement 
 spec:
@@ -15,7 +15,7 @@ spec:
         app: userManagement-app
     spec:
       containers:
-      - name: userManagement-deployment
+      - name: usermanagement-deployment
         image: usermanagement29387.azurecr.io/jamesaflukeusermanagement:24
         resources:
           requests:
