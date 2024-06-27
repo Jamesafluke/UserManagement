@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: usermanagement-deployment
   labels:
-    app: userManagement 
+    app: userManagement
 spec:
   replicas: 2
   selector:
@@ -15,11 +15,14 @@ spec:
         app: userManagement-app
     spec:
       containers:
-      - name: usermanagement-deployment
-        image: usermanagement29387.azurecr.io/jamesaflukeusermanagement:24
-        resources:
-          requests:
-            cpu: "100m"
-        imagePullPolicy: IfNotPresent
-        ports:
-        - containerPort: 3000
+        - name: usermanagement-deployment
+          image: usermanagement29387.azurecr.io/jamesaflukeusermanagement:24
+          resources:
+            limits:
+              cpu: 100m
+              memory: 256Mi
+            requests:
+              cpu: 100m
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
