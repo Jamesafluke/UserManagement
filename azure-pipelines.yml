@@ -12,7 +12,7 @@ variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '90ac97fb-4811-45a0-a67e-ed1a607a1728'
   imageRepository: 'jamesaflukeusermanagement'
-  containerRegistry: 'usermanagement29387.azurecr.io'
+  containerRegistry: 'jamesafluke/usermanagement'
   buildContext: $(Build.SourcesDirectory)
   dockerfilePath: '$(Build.SourcesDirectory)/UserManagement/Dockerfile'
   tag: '$(Build.BuildId)'
@@ -36,5 +36,5 @@ stages:
         repository: $(imageRepository)
         dockerfile: $(dockerfilePath)
         containerRegistry: $(dockerRegistryServiceConnection)
-        #tags: |
-         # $(tag)
+        tags: |
+          $(tag)
